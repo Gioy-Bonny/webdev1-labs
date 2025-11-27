@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ContactMe</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="image/fitma_white.png" alt="Gioele Bonini" id="main-img">
+    </header>
+    <nav>
+        <a href="photography.html">Photography</a>
+        <a href="music.html">Music</a>
+        <a href="contact.html">My Contact</a>
+        <a href="index.html">Homepage</a>
+        <a href="myCountry.html">My Country</a>
+
+    </nav>
+
+    <h1>Contact Me</h1>
+    <form class="contact-container">
+
+        <div id="form-group">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div id="form-group">
+            <label for="email">Email Address :</label>
+            <input type="email" name="email" id="email" required autocomplete="email"
+                pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address">
+        </div>
+
+        <div id="form-group">
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone" required pattern="^[0-9+\- ]{7,15}$">
+        </div>
+        <div id="form-group">
+            <label for="session">What type of photography are you interested in? *</label>
+            <select id="session" name="session" required>
+                <option value="">Select a session type</option>
+                <option value="portraits">Portrait Photography</option>
+                <option value="events">Event Photography</option>
+                <option value="product">Product Photography</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Contact Method *</label>
+            <div>
+                <input type="radio" id="contactEmail" name="contact-method" value="email" required>
+                <label for="contactEmail">Email</label>
+            </div>
+            <div>
+                <input type="radio" id="contactPhone" name="contact-method" value="phone" required>
+                <label for="contactPhone">Phone Call</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Add-ons (optional)</label>
+            <div>
+                <input type="checkbox" id="prints" name="addons" value="prints">
+                <label for="prints">Printed Photos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="editing" name="addons" value="editing">
+                <label for="editing">Advanced Editing</label>
+            </div>
+            <div>
+                <input type="checkbox" id="onlineGallery" name="addons" value="online-gallery">
+                <label for="onlineGallery">Online Gallery</label>
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+            <label for="message">Tell me more about your session *</label>
+            <textarea id="message" name="message" rows="5" required
+                placeholder="Event date, location, style..."></textarea>
+        </div>
+
+        <button type="submit">Send Request</button>
+    </form>
+</body>
+
+</html>
